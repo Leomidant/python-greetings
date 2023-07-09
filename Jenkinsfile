@@ -13,7 +13,7 @@ pipeline {
         }
         stage('tests-on-dev') {
             steps {
-                deploy("dev")
+                run_api_tests("dev")
             }
         }  
         stage('deploy-to-stg') {
@@ -23,7 +23,7 @@ pipeline {
         }
         stage('tests-on-stg') {
             steps {
-                deploy("stg")
+                run_api_tests("stg")
             }
         }
         stage('deploy-to-prod') {
@@ -33,7 +33,7 @@ pipeline {
         }
         stage('tests-on-prod') {
             steps {
-                deploy("prod")
+                run_api_tests("prod")
             }
         }
 
