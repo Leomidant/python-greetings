@@ -40,7 +40,7 @@ def deploy(String environment){
 
     sh "docker pull razmadzeb/python-greetings-app:latest"
 
-    sh "docker-compose stop python-greetings-app-${environment}"
-    sh "docker-compose rm python-greetings-app-${environment}"
-    sh "docker-compose up -d python-greetings-app-${environment}"
+    sh "docker-compose stop greetings-app-${environment}"
+    sh "docker-compose rm greetings-app-${environment}"
+    sh "docker-compose up -d greetings-app-${environment}"
 }
