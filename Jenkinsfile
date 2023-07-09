@@ -38,6 +38,8 @@ def build_docker_image() {
 def deploy(String environment){
     echo "Deployment triggered on ${environment} environment.."
 
+    sh "docker pull razmadzeb/python-greetings-app:latest"
+
     sh "docker-compose stop python-greetings-app-${environment}"
     sh "docker-compose rm python-greetings-app-${environment}"
     sh "docker-compose up -d python-greetings-app-${environment}"
