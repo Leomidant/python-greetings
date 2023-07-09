@@ -49,12 +49,12 @@ def build_docker_image() {
     sh 'docker build -t razmadzeb/python-greetings-app:latest .'
     sh 'docker push razmadzeb/python-greetings-app:latest'
 
-    echo "Building docker image for api-tests"
+    // echo "Building docker image for api-tests"
 
-    git branch: 'main', url: 'https://github.com/Leomidant/course-js-api-framework'
+    // git branch: 'main', url: 'https://github.com/Leomidant/course-js-api-framework'
     
-    sh 'docker build -t razmadzeb/api-tests:latest .'
-    sh 'docker push razmadzeb/api-tests:latest'
+    // sh 'docker build -t razmadzeb/api-tests:latest .'
+    // sh 'docker push razmadzeb/api-tests:latest'
 }
 
 def deploy(String environment){
